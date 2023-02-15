@@ -4,7 +4,23 @@
 
 
 const isAnagram = (s,t) => {
-    return s,t
+    if( s.length != t.length){
+        return false
+    }
+
+    
+
+   
+    let arr1 = [...new Set(s.split("").sort())]
+    let arr2 = [...new Set(t.split("").sort())]
+    if(JSON.stringify(arr1) === JSON.stringify(arr2)){
+        return true
+    }else{
+        return false
+    }
+
+    
+   
 }
 
-console.log(isAnagram("anagram","nagaram"))
+console.log(isAnagram("aacc","ccac"));
