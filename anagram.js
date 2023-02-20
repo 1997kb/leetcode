@@ -18,8 +18,6 @@ function isAnagram(s, t) {
     freqMap[char] = (freqMap[char] || 0) + 1;
     
   }
-  
-  
   // Check if each character in string t is in the frequency map
   for (let i = 0; i < t.length; i++) {
     const char = t[i];
@@ -32,10 +30,11 @@ function isAnagram(s, t) {
       console.log(freqMap)
     }
   }
-  
-  
-  // If we made it this far, all characters in t were found in s
+// If we made it this far, all characters in t were found in s
   return true;
 }
 
 console.log(isAnagram("aacc","caca"));
+
+
+
