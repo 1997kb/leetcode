@@ -4,28 +4,73 @@
 // typically using all the original letters exactly once.
 
 
-function groupAnagrams(strs) {
-    const map = new Map();
+// function groupAnagrams(strs) {
+//     const map = new Map();
     
-    for (let str of strs) {
+//     for (let str of strs) {
       
-      const key = str.split('').sort().join('');
+//       const key = str.split('').sort().join('');
       
       
-      if (map.has(key)) {
+//       if (map.has(key)) {
         
-        map.get(key).push(str);
-        console.log("from If statement",map)
+//         map.get(key).push(str);
+        
 
-      } else {
+//       } else {
         
-        map.set(key, [str]);
-        console.log("from else statement",map)
-      }
-    }
+//         map.set(key, [str]);
+        
+//       }
+//     }
     
-    return Array.from(map.values());
-  }
+//     return Array.from(map.values());
+//   }
 
   
-console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
+// console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
+
+
+
+// function check(num) {
+
+//   return num * 2
+// }
+
+
+// const map = new Map();
+
+// const anagrams = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+// for(let i of anagrams){
+//   var key = i.split('').sort().join('');
+//   console.log(map)
+//   console.log(key)
+//   if(map.has(key)){
+//     console.log("from if statement")
+//     map.get(key).push(i);
+    
+//   }else{
+//     console.log("from else statement")
+//      map.set(key, [i]);
+    
+//   }
+// }
+
+
+// const map = new Map();
+
+// const anagrams = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+
+// for(let i of anagrams){
+//     const key = i.split('').sort().join('');
+//     if(map.has(key)){
+//         map.get(key).push(i); // add value in the existing
+//     }else{
+//         map.set(key,[i]); //add key value pair
+//     }
+// }
+// console.log(map)
+
+// console.log(Array.from(map.values()));
+
+
