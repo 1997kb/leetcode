@@ -3,41 +3,58 @@
 //or phrase, typically using all the original letters exactly once.
 
 
-function isAnagram(s, t) {
-  // If the two strings have different lengths, they cannot be anagrams
-  if (s.length !== t.length) {
-    return false;
-  }
+// function isAnagram(s, t) {
+//   // If the two strings have different lengths, they cannot be anagrams
+//   if (s.length !== t.length) {
+//     return false;
+//   }
   
-  // Create a character frequency map for string s
-  const freqMap = {};
-  for (let i = 0; i < s.length; i++) {
+//   // Create a character frequency map for string s
+//   const freqMap = {};
+//   for (let i = 0; i < s.length; i++) {
     
-    const char = s[i];
+//     const char = s[i];
    
-    freqMap[char] = (freqMap[char] || 0) + 1;
+//     freqMap[char] = (freqMap[char] || 0) + 1;
     
-  }
-  // Check if each character in string t is in the frequency map
-  for (let i = 0; i < t.length; i++) {
-    const char = t[i];
-    if (!freqMap[char]) {
-        console.log("returned from if statement")
-      return false;
-    } else {
-      console.log(freqMap[char])
-      freqMap[char]--;
-      console.log(freqMap)
-    }
-  }
-// If we made it this far, all characters in t were found in s
-  return true;
-}
+//   }
+//   // Check if each character in string t is in the frequency map
+//   for (let i = 0; i < t.length; i++) {
+//     const char = t[i];
+//     if (!freqMap[char]) {
+//         console.log("returned from if statement")
+//       return false;
+//     } else {
+//       console.log(freqMap[char])
+//       freqMap[char]--;
+//       console.log(freqMap)
+//     }
+//   }
+// // If we made it this far, all characters in t were found in s
+//   return true;
+// }
 
-console.log(isAnagram("aacc","caca"));
-
-
+// console.log(isAnagram("aacc","caca"));
 
 
 
 
+
+// function isAnagram(s,t){
+//   if(s.length != t.length){
+//     return false
+//   }
+
+//   const freqMap ={};
+//   for(let i = 0; i<=s.length;i++){
+//     freqMap[s[i]] = (freqMap[s[i]] || 0) + 1
+//   }
+//   for(let j = 0; j<=t.length;t++){
+//     if(!freqMap[t[i]]){
+//       return false
+//     }
+//   }
+
+// }
+
+// console.log(isAnagram("aacc","caca"));
