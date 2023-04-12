@@ -10,56 +10,59 @@
 // Only the filled cells need to be validated according to the mentioned rules.
 
 
-var soduko = (arr) => {
-
-    //check validity for row    
-    // for( let i = 0; i<9;i++){
-    //     const row = arr[i];
-    //     if(isValidSet(row) === false){
-    //         return false
-    //     }
-    // }
-
-    //check validity for column
-    for(let i = 0; i<9;i++){
-        console.log("resetting column array")
-        const column = [];
-        
-        for(let j= 0; j<9;j++){
-            column.push(arr[j][i])
-            console.log(column)
-        }
+function isValidSudoku(board) {
+    // Check rows
+    for (let i = 0; i < 9; i++) {
+      const row = board[i];
+      if (!isValidSet(row)) {
+        return false;
+      }
     }
-
-
-    function isValidSet(nums) {
-        const set = new Set();
-        for( const num in nums){
-            if(num !== '.'){
-                if(set.has(num)){
-                    return false;
-                }
-                set.add(num);
-            }
-        }
-
-        return true;
+  
+    // Check columns
+    for (let i = 0; i < 9; i++) {
+      const column = [];
+      for (let j = 0; j < 9; j++) {
+        column.push(board[j][i]);
+      }
+      if (!isValidSet(column)) {
+        return false;
+      }
     }
+  
+    // Check sub-boxes
+    for (let i = 0; i < 9; i += 3) {
+      for (let j = 0; j < 9; j += 3) {
+        const subBox = [];
+        for (let k = i; k < i + 3; k++) {
+          for (let l = j; l < j + 3; l++) {
+            subBox.push(board[k][l]);
+          }
+        }
+        if (!isValidSet(subBox)) {
+          return false;
+        }
+      }
+    }
+  
+    return true;
+  }
+  
+  function isValidSet(nums) {
+    const set = new Set();
+    for (const num of nums) {
+      if (num !== '.') {
+        if (set.has(num)) {
+          return false;
+        }
+        set.add(num);
+      }
+    }
+    return true;
+  }
 
-    
-    
-}       
 
 
-console.log(soduko([ 
-['5', '3', '.', '.', '7', '.', '.', '.', '.'],
-['6', '.', '.', '1', '9', '5', '.', '.', '.'],
-['.', '9', '8', '.', '.', '.', '.', '6', '.'],
-['8', '.', '.', '.', '6', '.', '.', '.', '3'],
-['4', '.', '.', '8', '.', '3', '.', '.', '1'],
-['7', '.', '.', '.', '2', '.', '.', '.', '6'],
-['.', '6', '.', '.', '.', '.', '2', '8', '.'],
-['.', '.', '.', '4', '1', '9', '.', '.', '5'],
-['.', '.', '.', '.', '8', '.', '.', '7', '9']
-]));
 
+  
+  
