@@ -48,6 +48,20 @@ function isValidSudoku(board) {
     return true;
   }
   
+  // function isValidSet(nums) {
+  //   const set = new Set();
+  //   for (const num of nums) {
+  //     if (num !== '.') {
+  //       if (set.has(num)) {
+  //         return false;
+  //       }
+  //       set.add(num);
+  //     }
+  //   }
+  //   return true;
+  // }
+
+
   function isValidSet(nums) {
     const set = new Set();
     for (const num of nums) {
@@ -60,7 +74,6 @@ function isValidSudoku(board) {
     }
     return true;
   }
-
 
 
 
