@@ -10,71 +10,84 @@
 // Only the filled cells need to be validated according to the mentioned rules.
 
 
-function isValidSudoku(board) {
-    // Check rows
-    for (let i = 0; i < 9; i++) {
-      const row = board[i];
-      if (!isValidSet(row)) {
-        return false;
-      }
-    }
-  
-    // Check columns
-    for (let i = 0; i < 9; i++) {
-      const column = [];
-      for (let j = 0; j < 9; j++) {
-        column.push(board[j][i]);
-      }
-      if (!isValidSet(column)) {
-        return false;
-      }
-    }
-  
-    // Check sub-boxes
-    for (let i = 0; i < 9; i += 3) {
-      for (let j = 0; j < 9; j += 3) {
-        const subBox = [];
-        for (let k = i; k < i + 3; k++) {
-          for (let l = j; l < j + 3; l++) {
-            subBox.push(board[k][l]);
-          }
-        }
-        if (!isValidSet(subBox)) {
-          return false;
-        }
-      }
-    }
-  
-    return true;
-  }
-  
-  // function isValidSet(nums) {
-  //   const set = new Set();
-  //   for (const num of nums) {
-  //     if (num !== '.') {
-  //       if (set.has(num)) {
-  //         return false;
-  //       }
-  //       set.add(num);
-  //     }
-  //   }
-  //   return true;
-  // }
+// function isValidSudoku(board) {
+//   // Check rows
+//   for (let i = 0; i < 9; i++) {
+//     const row = board[i];
+//     if (!isValidSet(row)) {
+//       return false;
+//     }
+//   }
+
+//   // Check columns
+//   for (let i = 0; i < 9; i++) {
+//     const column = [];
+//     for (let j = 0; j < 9; j++) {
+//       column.push(board[j][i]);
+//     }
+//     if (!isValidSet(column)) {
+//       return false;
+//     }
+//   }
+
+//   // Check sub-boxes
+//   for (let i = 0; i < 9; i += 3) {
+//     for (let j = 0; j < 9; j += 3) {
+//       const subBox = [];
+//       for (let k = i; k < i + 3; k++) {
+//         for (let l = j; l < j + 3; l++) {
+//           subBox.push(board[k][l]);
+//         }
+//       }
+//       if (!isValidSet(subBox)) {
+//         return false;
+//       }
+//     }
+//   }
+
+//   return true;
+// }
+
+// function isValidSet(nums) {
+//   const set = new Set();
+//   for (const num of nums) {
+//     if (num !== '.') {
+//       if (set.has(num)) {
+//         return false;
+//       }
+//       set.add(num);
+//     }
+//   }
+//   return true;
+// }
 
 
-  function isValidSet(nums) {
-    const set = new Set();
-    for (const num of nums) {
-      if (num !== '.') {
-        if (set.has(num)) {
-          return false;
-        }
-        set.add(num);
-      }
+
+function isValidSudoku(board){
+  for(let i = 0;i <9; i++){
+    const row = board[i]
+    if(!isValidSet(row)){
+      return false
     }
-    return true;
   }
 
+
+function isValidSet(nums){
+  let set = new Set();
+  for(const num of nums){
+    if(nums !== '.'){
+      
+    }
+  }
+
+
+}
+
+
+  
+
+
+  
 
 
   
