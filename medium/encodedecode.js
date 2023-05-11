@@ -2,31 +2,22 @@
 // The encoded string is then sent over the network and is decoded back to the original list of strings.
 
 // Please implement encode and decode
-function encode(lists){
-    let str = "";
-    for(let i in lists){
-        str = str + lists[i] + lists[i].length.toString()+":";
-    }
-    
-    return str;
+
+function encode(strs) {
+  return strs.join(":;") + ":;";
 }
-
-
-
-
 
 function decode(str) {
-  const result = [];
-  let arr = str.split(":")
-  console.log("arr",arr)
-  return result;
+  return str.split(":;").slice(0, -1);
 }
 
+const originalStrs = ["lint", "code", "love", "you"];
 
-const encodedString = encode([ "foo", "bar", "baz" ]);
+const encodedStr = encode(originalStrs);
+console.log(encodedStr); // "lint:;code:;love:;you:;"
 
-console.log(decode(encodedString));
-
+const decodedStrs = decode(encodedStr);
+console.log(decodedStrs); // ["lint", "code", "love", "you"]
 
 
 
