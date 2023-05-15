@@ -4,16 +4,19 @@
 
 function longest(nums){
     const set = new Set(nums);
+    let longestStreak = 0;
 
     for(let num of set){
         if(!set.has(num - 1)){
-            const current_num = num;
-            const current_count = 1;
+            let current_num = num;
+            let current_count = 1;
             
             while(set.has(current_num + 1)){
                 current_num = current_num + 1;
                 current_count = current_count + 1;
             }
+
+            longestStreak = Math.max(longestStreak,current_count)
             
         }
         
@@ -21,7 +24,9 @@ function longest(nums){
 
     }
 
-    return current_count;
+    return longestStreak
+
+    
     
 }
 
