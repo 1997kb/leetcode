@@ -18,10 +18,12 @@
 // }
 
 
-const containsDuplicate = (nums) => {
-    const set = new Set(nums);
-    return set.size !== nums.length;
+// const containsDuplicate = (nums) => {
+//     const set = new Set(nums);
+//     return set.size !== nums.length;
 
-}
+// }
 
-console.log(containsDuplicate([1,1,2,3,4]))
+// console.log(containsDuplicate([1,1,2,3,4]))
+
+
