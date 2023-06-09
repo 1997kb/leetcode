@@ -5,22 +5,24 @@
 // Given a string s, return true if it is a palindrome, or false otherwise.
 
 
-const checkPalindrome = (str) => {
+// const checkPalindrome = (str) => {
 
-    if(str === " "){
-        return true
-    }
+//     if(str === " "){
+//         return true
+//     }
 
-    let result = str.split(/[^a-zA-z0-9]/g).join('').toLowerCase();
-    if(result === result.split('').reverse().join('')){
-        return true;
-    }else{
-        return false
-    }
+//     let result = str.split(/[^a-zA-z0-9]/g).join('').toLowerCase();
+//     if(result === result.split('').reverse().join('')){
+//         return true;
+//     }else{
+//         return false
+//     }
     
     
-}
+// }
 
 
 
-console.log(checkPalindrome("race a car"));
+// console.log(checkPalindrome("race a car"));
+
+
